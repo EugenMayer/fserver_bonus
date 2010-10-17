@@ -1,0 +1,21 @@
+<?php
+
+include_once('fserver_bonus.features.inc');
+include_once('views/fserver_bonus.views.inc');
+
+
+/**
+ * Theme preprocess for theme('fserver_updatexml')
+ */
+function template_preprocess_fserver_bonus_project_list(&$vars) {
+  $vars['view']->style_plugin->preprocess($vars);
+}
+
+function fserver_bonus_theme() {
+  return array(
+    'fserver_bonus_project_short' => array(
+      'template' => 'fserver_bonus_project_short',
+      'arguments' => array('details' => array())
+    )
+  );
+}
