@@ -302,8 +302,9 @@ function fserver_bonus_views_default_views() {
   ));
   $handler->override_option('title', 'Projects and distributions');
   $handler->override_option('empty', 'There are currently no projects or distributions available.');
-  $handler->override_option('items_per_page', 20);
-  $handler->override_option('use_pager', '1');
+  $handler->override_option('empty_format', '1');
+  $handler->override_option('items_per_page', 0);
+  $handler->override_option('use_pager', '0');
   $handler->override_option('style_plugin', 'grid');
   $handler->override_option('style_options', array(
     'grouping' => '',
