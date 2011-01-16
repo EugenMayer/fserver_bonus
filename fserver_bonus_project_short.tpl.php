@@ -9,7 +9,7 @@
       echo "<term><name>$name</name><value>$value</value></term>";
     }
     ?>
-  </terms>
+  </terms>  
   <project_status><?php echo $details['project_status']; ?></project_status>
   <api_versions>
     <?php
@@ -18,4 +18,8 @@
     }
     ?>
   </api_versions>
+  <sourcecode>
+    <type><?php print $details['sourcecode_type']; ?></type>
+    <uri><?php print $details['sourcecode_uri']; ?></uri>
+  </sourcecode>
  </project>

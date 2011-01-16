@@ -4,7 +4,7 @@ class fserver_bonus_plugin_style_updatexml extends views_plugin_style {
    * List of project XML elements.
    */
   protected function project_elements() {
-    return array('title', 'short_name', 'dw:creator', 'link', 'project_status');
+    return array('title', 'short_name', 'dw:creator', 'link', 'project_status', 'sourcecode_type', 'sourcecode_uri');
   }
   
 
