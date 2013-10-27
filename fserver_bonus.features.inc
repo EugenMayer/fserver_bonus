@@ -5,6 +5,6 @@
  */
 function fserver_bonus_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3',
   );
 }

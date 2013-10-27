@@ -77,9 +77,13 @@ class fserver_bonus_plugin_style_updatexml extends views_plugin_style {
       );
       // Get the current project node id. The field is defined in the options before
       $nid = $record[$vars['options']['nid']];
-     
-      // Get all the APIs by fetching all the existing releases using the already existing view      
+      //s$short_name = $record[$vars['options']['project']['short_name']]);
+      // Get all the APIs by fetching all the existing releases using the already existing view
+      global $user;
+      $old_user = $user;
+      $user = user_load(1);
       $result = views_get_view_result('fserver_releases','page_1', $nid);
+      $user = $old_user;
       foreach($result as $releases) {
         $api = $releases->node_data_field_fserver_project_field_fserver_api_value;
         // We use the $api as key to avoid dublicates :)
